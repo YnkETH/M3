@@ -14,7 +14,7 @@ utils.readFile = function (filename, callback) {
     });
   }, randExtraTime);
 };
-
+// es una funcion a la que pasamos el path y lo que hace es retornarme una promesa y lo que hace es leerla
 utils.promisifiedReadFile = function (filename) {
   return new Promise(function (resolve, reject) {
     let readFileSync = fs.readFileSync(filename);
@@ -23,12 +23,13 @@ utils.promisifiedReadFile = function (filename) {
   });
 };
 
+//consologear en color azul
 utils.blue = function (text) {
   if (text !== undefined && text !== null) console.log(chalk.blue(text));
 };
-
+//consologear en color magenta
 utils.magenta = function (text) {
-  console.error(chalk.magenta(text));
+  console.log(chalk.magenta(text));
 };
 
 module.exports = utils;
